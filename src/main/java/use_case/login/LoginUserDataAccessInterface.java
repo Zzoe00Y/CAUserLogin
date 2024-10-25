@@ -6,6 +6,11 @@ import entity.User;
  * DAO for the Login Use Case.
  */
 public interface LoginUserDataAccessInterface {
+    /**
+     * Checks if the given username exists.
+     * @return null
+     */
+    String getCurrentUser();
 
     /**
      * Checks if the given username exists.
@@ -26,5 +31,11 @@ public interface LoginUserDataAccessInterface {
      * @return the user with the given username
      */
     User get(String username);
+
+    /**
+     * Returns the user with the given username.
+     * @param name the username to look up
+     */
+    void setCurrentUser(String name);
 
 }
